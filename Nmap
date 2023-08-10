@@ -1,0 +1,24 @@
+                Nmap Command in Linux
+
+Nmap is a linux command line tool used for network exploration and security auditng.
+
+security auditing - > A cybersecurity audit involves a comprehensive analysis and 
+review of your IT infrastructure.
+It is used for the following purpose -
+
+1. Real time information of a network
+2. Detailed information of all the IPs activated on your network.
+3. Number of ports open in a network.
+4. Provide the list of live hosts.
+5. Port, OS and Host scanning.
+
+to install Nmap   ubuntu command ->   sudo apt-get install Nmap
+
+Scanning a system using Nmap command
+it can be done using the hostname or the IP address.
+
+nmap geeksforgeeks.com
+or
+nmap 172.217.27.714
+
+
