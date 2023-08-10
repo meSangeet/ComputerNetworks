@@ -14,11 +14,127 @@ It is used for the following purpose -
 
 to install Nmap   ubuntu command ->   sudo apt-get install Nmap
 
+1. Scanning a network
+
 Scanning a system using Nmap command
 it can be done using the hostname or the IP address.
 
 nmap geeksforgeeks.com
 or
 nmap 172.217.27.714
+
+2. Scanning a network using -v command
+
+
+It is used to get more detailed information about the remote machines
+eg -> nmap -v geeksforgeeks.com
+
+
+
+3. To scan multiple hosts
+
+eg -> nmap 103.76.228.244  157.240.198  172.217.27.174
+
+We can scan multiple hosts by writing IP addresses or hostnames separated by spaces
+by nmap
+
+
+4. To scan whole subnet 
+
+We can scan a whole subnet or IP range with nmap by providing "*" with it. It will
+scan a whole subnet and give the information about those hosts which are Up in the 
+Network.
+
+what is a subnet? -> A subnet, or subnetwork, is a network inside a network. Subnets
+make networks nore efficient. Through subnetting, network traffic can travel a shorter
+distance without passing through unnecessary routers to reach its destination.
+
+
+eg -> nmap 103.76.228.*
+
+5. To scan specific range of IP address
+
+nmap 192.168.29.1-20
+
+We can specify the range of IP addresses. This command will scan IP address 
+192.168.29.1 to 192.168.29.20
+
+
+6. To scan to detect firewall settings.  
+
+sudo nmap -sA 103.76.228.244
+nmap-firewall-settings
+
+Detecting firewall settings can be useful during penetration testing and 
+vulnerability scans. To detect it we use “-sA” option. 
+This will provide you with information about firewall being active on the host. 
+It uses an ACK scan to receive the information. 
+
+7. To identify Hostnames  
+
+sudo nmap -sL  103.76.228.244 
+to-identify-hostnames-nmap
+
+We use “sL” option to find hostnames for the given host by completing a DNS query for each one. In addition to this “-n” command can be used to skip DNS resolution, while the “-R” command can be used to always resolve DNS. 
+
+8. To scan from a file 
+
+nmap -iL input.txt
+scan-from-file-nmap
+
+If we have a long list of addresses that we need to scan, we can directly import a file through the command line. It will produce a scan for the given IP addresses. 
+9. To get some help 
+
+nmap -h
+nmap-help1nmap-help2
+
+We use the “-h” option if we have any questions about nmap or any of the given commands. It shows the help section for nmap command, including giving information regarding the available flags.
+
+10.  Here -sS flag is used for TCP SYN Scan, Which is a stealthy and efficient method of scanning for open ports on a target system.
+
+nmap -sS <Domain Name>
+
+ 
+
+11. Here “-oG” flag can be used to store the nmap result in to specific file.
+
+nmap -sS <Domain Name> -oG <file-path>
+
+ 
+
+12. The “-sU” flag is used with nmap to perform a UDP scan, which allows the user to discover open UDP ports and services on a target system.
+
+nmap -sU <Domain Name>
+13. The “-sn” flag is used with nmap to perform a ping scan, which sends ICMP requests to a target host or network to determine hosts is up or not.
+
+nmap -sn <Domain Name>
+
+ 
+
+14. The “-p” flag is used with nmap to perform scan on a specific port or range of ports. ( In our case it will scan port 80,443 and 21 )
+
+nmap -p 80 443 21 <Domain Name>
+
+ 
+
+15. We can also specify the range of ports to scan on a network. ( In this case it will scan all the ports in the range of 1 to 80 )
+
+nmap -p 1-80 <Domain Name>
+
+ 
+
+16. Here -A indicates aggressive, it will give us extra information, like OS detection (-O), version detection, script scanning (-sC), and traceroute (–traceroute). It even provides a lot of valuable information about the host.
+
+nmap -A <Domain Name>
+nmap -A
+
+17. Using this command we can discover the target hosting service or identify additional targets according to our needs for quickly tracing the path.
+
+nmap --trace out <Domain Name>
+nmap --trace out
+
+18.  Here it will display the operating system where the domain or ip address is running, but will not display the exact operating system available on the computer. It will display only the chance of operating system available in the computer. The command will just guess the running operating system (OS) on the host.
+
+nmap -O <Domain Name>
 
 
