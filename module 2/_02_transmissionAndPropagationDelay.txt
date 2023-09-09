@@ -1,0 +1,52 @@
+Transmission and Propagation Delay
+
+Delays in Packet switching :
+Transmission Delay
+Propagation Delay
+Queuing Delay
+Processing Delay
+
+
+Transmission Delay :
+Time taken to put a packet onto link. In other words, it is simply time required to put data bits on the wire/communication medium. It depends on length of packet and bandwidth of network.
+Transmission Delay = Data size / bandwidth = (L/B) second
+
+
+For example,
+Let the link bandwidth of a network be 100 bits/second and the packet length be 1000 bits. Therefore the tarnsmission delay for the following network will be 1000/100 = 10 seconds.
+
+Propagation delay :
+
+Time is taken by the first bit to travel from sender to receiver end of the link. In other words, it is simply the time required for bits to reach the destination from the start point. Factors on which Propagation delay depends are Distance and propagation speed.
+Propagation delay = distance/transmission speed = d/s
+
+
+Lets take another example with the distance as 30 km, velocity being 3 x 10^8 meter/second.
+Therefore, the propagation delay = distance/velocity = (30 * 10^3)/(3 * 10^8) = 0.1 milli-second.
+
+Queuing Delay :
+
+Queuing delay is the time a job waits in a queue until it can be executed. It depends on congestion. It is the time difference between when the packet arrived Destination and when the packet data was processed or executed. It may be caused by mainly three reasons i.e. originating switches, intermediate switches or call receiver servicing switches.
+
+Average Queuing delay = (N-1)L/(2*R)
+where N = no. of packets
+      L=size of packet
+      R=bandwidth
+
+
+Processing Delay :
+Processing delay is the time it takes routers to process the packet header. Processing of packets helps in detecting bit-level errors that occur during transmission of a packet to the destination. Processing delays in high-speed routers are typically on the order of microseconds or less.
+In simple words, it is just the time taken to process packets.
+
+Total time or End-to-End time  
+= Transmission delay + Propagation delay+ Queuing delay
+                                  + Processing delay
+
+
+
+
+For M hops and N packets -
+Total delay 
+= M*(Transmission delay + propagation delay)+
+                (M-1)*(Processing delay + Queuing delay) + 
+                (N-1)*(Transmission delay)
