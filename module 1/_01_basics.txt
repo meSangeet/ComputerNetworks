@@ -1,0 +1,227 @@
+Introduction
+
+A computer network is an interconnection of computers.
+
+It uses a set of common communication protocols.
+
+Used for sharing resources located on the network nodes.
+
+The interconnections between nodes are formed from a broad spectrum
+of telecommunication network technologies.
+
+The nodes of a computer network may be classified by many means as personal
+computers, servers, networking hardware, or general purpose hosts.
+
+They are identified by hostnames and network addresses.
+
+The term telecommunication means communication at a distance.
+
+The word data refers to information presented in whatever form is agreed upon by parties creating and using the data.
+
+Data communications are the exchange of data between two devices via some form of transmission medium such as a wire cable.
+
+
+
+Five components of data communication- 
+
+1. sender
+2. receiver
+3. protocol
+4. medium
+5. messages
+
+
+Data flow methods -> Communication between two devices can be simplex(only one way), half-duplex(one way at a time), or full-duplex(both way).
+
+
+Network Definition
+
+Interconnection of set of devices capable of communication. A device can be host or connecting device.
+
+A network must be able to meet a certain number of criteria such 
+1. performance
+2. reliability
+3. security
+
+Types of connections :
+
+1. point to point -> there is a link between two stations
+
+2. multipoint -> There is a main frame   which connects different stations through a link.
+
+
+
+Network Classification
+
+The criteria of distinguishing one type of network from another is based on few
+criteria such as size, geographical coverage, and ownership to make this
+distinction.
+
+They are classified as:
+
+Local Area Networks (LANs)
+
+Wide Area Networks (WANs)
+
+Metropolitan Area Networks (MANs)
+
+Storage Area Networks (SAN)
+
+Personal Area Networks (PAN)
+
+
+1. Local Area Networks (LANs)
+
+A LAN is a group of computer and peripheral devices like hard-disks, DVD-ROM,
+and printers.
+
+Work in limited area such as school, laboratory, home, and office building.
+
+Useful for sharing resources like files, printers, games, and other application.
+
+It is a private network.
+
+LAN operates at a relatively higher speed and follow standard of 802.3
+There are various kinds of media access control methods like token ring and Ethernet.
+
+2. Wide Area Networks (WANs)
+
+WAN is spread across a large geographical area.
+
+WAN network system could be a connection of LANs or MANs.
+
+The LANs are interconnected using telephone lines and radio waves.
+
+The software is shared among all the users and all can access them.
+
+Any organization can form its global integrated network using WAN.
+
+It follows network standard as 802.11, 802.1, 802.3
+
+3. Metropolitan Area Networks (MANs)
+
+Consist of a computer network across an entire city, college campus, or a small
+region.
+
+Mostly used medium for communication is optical fibers cables.
+
+Data rates adequate for distributed computing applications.
+
+MAN network uses dual bus for both directions communication.
+
+It follows network standard as 802.11, 802.1, 802.3
+
+4. Storage Area Networks (SANs)
+
+A SAN is a specialized, high-speed network access to storage devices.
+
+SANs are typically composed of hosts, switches, storage elements, and storage
+devices that are interconnected using a variety of technologies, topologies, and
+protocols.
+
+It uses virtualization to make storage available to every host connected.
+
+5. Personal Area Networks (PANs)
+
+PANs are short-range wireless networks that work over a range of tens of metres.
+
+PANs main role is to eliminate cables that connect our devices to peripherals.
+
+The devices are cordless products, such as mouse devices and keyboards, that use
+radio or infrared.
+
+Mode of communication is generally Bluetooth, which allows enabled devices
+such as phones, mobiles, mouse devices, headsets, PCs, printers and keyboards to
+connect wirelessly.
+
+
+
+INTERCONNECTING DEVICES 
+
+List of networking devices
+
+1. Repeaters
+2. Hubs
+3. Bridges
+4. switches
+5. routers
+
+
+Repeaters
+
+A physical layer device that acts on bits not on frames or packets.
+
+Can have two or more interfaces.
+
+When a bit (0,1) arrives, the repeater receives it and regenerates it, and transmits it onto
+all other interfaces.
+
+Used in LAN to connect cable segments and extend the maximum cable length.
+
+Ethernet 10base5 – Max. segment length 500m – 4 repeaters (5 segments) are used
+to extend the cable to 2500m
+
+Ethernet 10Base2- Max. segment length 185m - 4 repeaters (5 segments) are used
+to extend the cable to 925m
+
+Repeaters do not implement any access method that means if any two nodes on any two
+connected segments transmit at the same time collision will happen.
+
+
+What are frames or packets
+ChatGPT
+Frames and packets are fundamental concepts in computer networking, and they represent how data is organized and transmitted over a network.
+
+Frames:
+
+Ethernet Frames: Frames are associated with Ethernet networks, which are commonly used in local area networks (LANs). An Ethernet frame is a structured unit of data that includes the following components:
+Preamble: A series of alternating 1s and 0s used to signal the start of a frame.
+Destination MAC Address: The Media Access Control (MAC) address of the device to which the frame is being sent.
+Source MAC Address: The MAC address of the device sending the frame.
+Type or Length Field: Specifies the type of data contained in the frame or the length of the frame.
+Data: The actual payload or data being transmitted.
+Frame Check Sequence (FCS): A checksum used for error detection.
+Ethernet frames are typically used in LANs to carry data between devices like computers, switches, and routers. Each device on an Ethernet network has a unique MAC address, and frames are used to route data to its intended recipient.
+
+Packets:
+
+IP Packets: Packets are associated with the Internet Protocol (IP) and are used in wide area networks (WANs) and the broader internet. An IP packet is a unit of data that includes the following components:
+
+Header: Contains information necessary for routing and delivery, including the source and destination IP addresses, Time-to-Live (TTL), and protocol information.
+
+Payload: The actual data being transmitted, such as a web page, email, or any other application data.
+IP packets are used to transmit data across networks, including the internet. Each device connected to the internet has a unique IP address, and IP packets are used to route data between these devices. Unlike Ethernet frames, which are specific to LANs, IP packets enable data to traverse larger, interconnected networks.
+
+In summary, frames are used within local area networks (e.g., Ethernet LANs) and contain MAC addresses for device-level communication, while packets are used for wide area networking and the internet, containing IP addresses for global network communication. Frames are encapsulated within packets when data is transmitted from a LAN to the internet, with the packet's header containing information about how to route the encapsulated frame to its destination.
+
+
+What is an IP address
+
+An IP address, which stands for "Internet Protocol address," is a unique numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. IP addresses serve two primary purposes:
+
+Host or Device Identification: IP addresses are used to uniquely identify devices on a network. In the context of the internet, they identify individual devices such as computers, smartphones, servers, routers, and other networked equipment.
+
+Routing and Addressing: IP addresses play a crucial role in routing data packets between devices on a network. They help determine the source and destination of data packets, allowing them to be directed to the correct recipient across the internet or any other IP-based network.
+
+
+An IP address, which stands for "Internet Protocol address," is a unique numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. IP addresses serve two primary purposes:
+
+Host or Device Identification: IP addresses are used to uniquely identify devices on a network. In the context of the internet, they identify individual devices such as computers, smartphones, servers, routers, and other networked equipment.
+
+Routing and Addressing: IP addresses play a crucial role in routing data packets between devices on a network. They help determine the source and destination of data packets, allowing them to be directed to the correct recipient across the internet or any other IP-based network.
+
+There are two main versions of IP addresses:
+
+IPv4 (Internet Protocol version 4): IPv4 addresses consist of four sets of decimal numbers, separated by periods (e.g., 192.168.1.1). Each set can range from 0 to 255, providing a total of approximately 4.3 billion unique IPv4 addresses. Due to the rapid growth of the internet, IPv4 addresses are running out, and this version is gradually being replaced by IPv6.
+
+IPv6 (Internet Protocol version 6): IPv6 addresses are designed to address the limitations of IPv4 by using a longer and more complex address format. IPv6 addresses are written as eight groups of hexadecimal digits separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334). IPv6 provides an almost unlimited number of unique addresses, ensuring the continued growth of the internet.
+
+IP addresses can be categorized into two types based on their scope:
+
+Public IP Addresses: These are unique addresses assigned to devices directly connected to the internet. Public IP addresses are used for global communication and are routable across the internet. Organizations, data centers, and internet service providers (ISPs) typically receive allocations of public IP addresses.
+
+Private IP Addresses: These addresses are used within local networks (e.g., home or corporate LANs) and are not directly accessible from the internet. Private IP addresses are used for internal communication and are often assigned to devices like computers, printers, or routers within a private network. They are typically reserved for local use and are not globally unique.
+
+
+2. Hubs ->
+
