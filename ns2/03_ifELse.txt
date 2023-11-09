@@ -1,0 +1,28 @@
+Q check whether a number is greater than 10
+
+set a 30
+
+if ($a > 10) {
+    puts "a is greater than 10"
+} else {
+    puts "a is smaller than 10"
+}
+
+we can also use if(expr [$a > 10])
+
+
+// While Loop
+
+set a 0
+
+while($a < 10)
+{
+    puts $a
+    set a [expr $a + 2]
+}
+
+//For Loop
+
+for {set a 1} {$a < 11} {set a [expr $a + 1]}{
+    puts $a
+}

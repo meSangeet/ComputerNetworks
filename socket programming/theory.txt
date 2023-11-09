@@ -1,0 +1,8 @@
+in server
+
+WSADATA is a data structure in Winsock library and it is used to store information 
+    about the initialization and configuration of winsock library
+    WSAStartup() initializes the Winsock library, and the WSADATA structure (wsaData) is used to store information about the initialized version of Winsock. Later in your program, you would use Winsock functions for networking tasks, and finally, you would call WSACleanup() to release any resources acquired during initialization.
+
+#pragma comment(lib, "ws2_32.lib");
+//above line ensures that winsock2 library is linked to out program

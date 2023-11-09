@@ -1,0 +1,11 @@
+set a(0) 21
+set a(1) 33
+set a(2) 45
+
+puts $a(0) // 21
+puts $a(1) // 33
+
+set salary("John") 20000
+set salary("raj") 30000
+
+puts $salary("John")

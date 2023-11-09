@@ -1,0 +1,16 @@
+file modes -> r w a r+ w+
+
+//opening a file 
+
+set f [open "one.txt" w+]
+
+puts $f "hihihihi" 
+//hihihi will be printed in th file
+
+to get content of file in some variable 
+close $f 
+set f [open "one.txt" r]
+
+gets $f d 
+puts $d 
+close $f

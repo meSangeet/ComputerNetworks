@@ -1,0 +1,29 @@
+we need to create a simulator class object
+
+set ns [new simulator]
+
+set tr [ open "out.txt" w]
+$ns trace-all $tr 
+//above line means this tr file we are going to use to save all of our simulation results
+
+set ftr [open "out.nam" w] //in this file we will save our data for network animator 
+$ns namtrace-all $ftr 
+
+//creating nodes
+
+set n0 [$ns node]
+set n1 [$ns node]
+
+//setting connection between these two nodes
+$ns duplex -link $n0 $n1 2MB 4ms DropTail
+
+//to generate traffic
+
+set tcp1 [new Agent/TCP]
+set sink [new Agent/TCPSink]
+//tcp sink works as tcp receiver 
+
+$ns attach-agent $n0 $tcp1 
+$ns attach-agent $n1 $sink
+//above we attached agent to nodes 
+

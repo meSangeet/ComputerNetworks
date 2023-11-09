@@ -1,0 +1,19 @@
+To install ns2
+
+sudo apt-gt install ns2
+
+if getting any error like package not found
+first run
+
+sudo apt-get update
+
+
+Creating Variable and printing its value
+
+set a 12
+puts $a
+
+save file text.tcl
+execute ns text.tcl
+
+

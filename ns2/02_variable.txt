@@ -1,0 +1,22 @@
+We don't need to declare variable we can directly set the variables
+
+set a 12
+set b "this"
+set c 2.3
+
+puts $a 
+// returns 12
+
+we can also use
+set x $a 
+
+//addition  ->  expr $a + 12
+
+set r [expr $a + 12]
+whenever we use a result of command we enclose the command in the square bracket
+
+When we use puts two times, puts, two things will automatically be printed on a new line if we want them to be printed on the same line we can use
+
+puts -nonewline "Hello, "
+puts "World!"
+

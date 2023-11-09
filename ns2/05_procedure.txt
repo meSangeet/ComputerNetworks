@@ -1,0 +1,32 @@
+Q-> Implement max in TCL script
+
+proc max {a,b} {
+    if {$a > $b} {
+        puts $a
+    } else {
+        puts $b
+    }
+}
+
+max 23 45
+
+//returning a value from a proc 
+Q implement sum in TCL script
+
+proc sum {a b c} {
+    set c [expr $a + $b + $c]
+
+    return $c
+}
+
+set x [sum 12 13 14]
+puts $x
+
+Q create a procedure where we want to return more than 1 values
+
+proc f {} {
+    return [list 1 2 3 4]
+}
+
+set x [f]
+puts $x
