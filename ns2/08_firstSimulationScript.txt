@@ -27,3 +27,28 @@ $ns attach-agent $n0 $tcp1
 $ns attach-agent $n1 $sink
 //above we attached agent to nodes 
 
+//establishing connection 
+
+$ns connect $n0 $n1 
+
+set ftp [new Application/FTP]
+
+$ftp attach.agent $tcp1 
+
+proc finish { } {
+    global ns tr ftr 
+    $ns flush-trace 
+    close $ftr 
+    close $tr 
+    exec nam out.nam &
+    exit
+}
+
+
+$ns at .1 "ftp start"
+$ns at 2.0 "ftp stop"
+
+$ns at 2.1 
+
+
+$ns run
